@@ -3,16 +3,17 @@ package com.chlqudco.develop.bookreport
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.chlqudco.develop.bookreport.Entity.BookEntity
 import com.chlqudco.develop.bookreport.databinding.ItemBookBinding
 import com.chlqudco.develop.bookreport.model.Book
 import java.text.SimpleDateFormat
 import java.util.*
 
 class BookAdapter: RecyclerView.Adapter<BookAdapter.Holder>() {
-    val listData = mutableListOf<Book>()
+    var listData = mutableListOf<BookEntity>()
 
     inner class Holder(val binding: ItemBookBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(bookModel : Book){
+        fun bind(bookModel : BookEntity){
             binding.ItemTitleTextView.text = bookModel.title
             binding.ItemRatingBar.numStars = bookModel.starRate
 
