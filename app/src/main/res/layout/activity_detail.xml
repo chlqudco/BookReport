@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddRecordActivity">
+    tools:context=".DetailActivity">
 
     <TextView
-        android:id="@+id/AddRecordTitleTextView"
+        android:id="@+id/DetailTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="제목"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/AddRecordTitleEditTextView"
+        app:layout_constraintBottom_toTopOf="@id/DetailTitleEditTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/AddRecordTitleEditTextView"
+        android:id="@+id/DetailTitleEditTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/AddRecordReportTextView"
+        android:id="@+id/DetailReportTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -41,20 +41,20 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordTitleEditTextView" />
+        app:layout_constraintTop_toBottomOf="@id/DetailTitleEditTextView" />
 
     <EditText
-        android:id="@+id/AddRecordReportEditText"
+        android:id="@+id/DetailReportEditText"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:gravity="top"
         android:hint="내용을 입력해 주세요"
-        app:layout_constraintEnd_toEndOf="@id/AddRecordTitleEditTextView"
-        app:layout_constraintStart_toStartOf="@id/AddRecordTitleEditTextView"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordReportTextView" />
+        app:layout_constraintEnd_toEndOf="@id/DetailTitleEditTextView"
+        app:layout_constraintStart_toStartOf="@id/DetailTitleEditTextView"
+        app:layout_constraintTop_toBottomOf="@id/DetailReportTextView" />
 
     <TextView
-        android:id="@+id/AddRecordRatingBarTextView"
+        android:id="@+id/DetailRatingBarTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="별점주기"
@@ -62,46 +62,45 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordReportEditText" />
+        app:layout_constraintTop_toBottomOf="@id/DetailReportEditText" />
 
     <RatingBar
-        android:id="@+id/AddRecordRatingBar"
+        android:id="@+id/DetailRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@id/AddRecordRatingBarTextView"
-        app:layout_constraintStart_toStartOf="@id/AddRecordRatingBarTextView"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordRatingBarTextView" />
+        app:layout_constraintEnd_toEndOf="@id/DetailRatingBarTextView"
+        app:layout_constraintStart_toStartOf="@id/DetailRatingBarTextView"
+        app:layout_constraintTop_toBottomOf="@id/DetailRatingBarTextView" />
 
     <Button
-        android:id="@+id/AddRecordAddImageButton"
+        android:id="@+id/DetailAddImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="책 사진 촬영"
-        app:layout_constraintEnd_toEndOf="@id/AddRecordRatingBar"
-        app:layout_constraintStart_toStartOf="@id/AddRecordRatingBar"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordRatingBar" />
+        android:text="사진 교체"
+        app:layout_constraintEnd_toEndOf="@id/DetailRatingBar"
+        app:layout_constraintStart_toStartOf="@id/DetailRatingBar"
+        app:layout_constraintTop_toBottomOf="@id/DetailRatingBar" />
 
     <ImageView
-        android:id="@+id/AddRecordImageView"
+        android:id="@+id/DetailImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AddRecordAddImageButton"
-        app:layout_constraintBottom_toTopOf="@id/AddRecordRegisterButton"/>
+        app:layout_constraintTop_toBottomOf="@id/DetailAddImageButton"
+        app:layout_constraintBottom_toTopOf="@id/DetailRegisterButton"/>
 
     <Button
-        android:id="@+id/AddRecordRegisterButton"
+        android:id="@+id/DetailRegisterButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="등록하기"
+        android:text="수정 완료"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

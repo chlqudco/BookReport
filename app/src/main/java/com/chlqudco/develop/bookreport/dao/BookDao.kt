@@ -2,6 +2,7 @@ package com.chlqudco.develop.bookreport.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.chlqudco.develop.bookreport.Entity.BookEntity
 
@@ -12,7 +13,8 @@ interface BookDao {
     @Query("SELECT * FROM book")
     fun getAll(): List<BookEntity>
 
-    //새로운 독후감 저장하기
-    @Insert
+    //독후감 저장하기
+    @Insert(onConflict =  OnConflictStrategy.REPLACE)
     fun insertBookReport(book: BookEntity)
+
 }
