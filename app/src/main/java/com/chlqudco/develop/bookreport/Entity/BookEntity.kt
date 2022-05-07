@@ -6,26 +6,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "book")
-class BookEntity {
-    constructor(title: String, report: String, starRate: Int, date: Long, uri: Uri) {
-        this.title = title
-        this.report = report
-        this.starRate = starRate
-        this.date = date
-        this.imageUri = uri
-    }
-
-    @PrimaryKey(autoGenerate = true)
-    var id: Int? = null
-    @ColumnInfo
-    var title: String = ""
-    @ColumnInfo
-    var report: String = ""
-    @ColumnInfo
-    var starRate: Int = 0
-    @ColumnInfo
-    var date: Long = 0
-    @ColumnInfo
-    var imageUri: Uri
-
-}
+data class BookEntity(
+    @PrimaryKey(autoGenerate = true) val id: Int?,
+    @ColumnInfo val title: String,
+    @ColumnInfo val report: String,
+    @ColumnInfo val starRate: Float,
+    @ColumnInfo val date: Long,
+    @ColumnInfo val imageUri: String?
+)

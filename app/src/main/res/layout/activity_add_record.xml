@@ -6,4 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".AddRecordActivity">
 
+    <TextView
+        android:id="@+id/AddRecordTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="제목"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/AddRecordTitleEditTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/AddRecordTitleEditTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="제목을 입력해 주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AddRecordReportTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="내용"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordTitleEditTextView" />
+
+    <EditText
+        android:id="@+id/AddRecordReportEditText"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:gravity="top"
+        android:hint="내용을 입력해 주세요"
+        app:layout_constraintEnd_toEndOf="@id/AddRecordTitleEditTextView"
+        app:layout_constraintStart_toStartOf="@id/AddRecordTitleEditTextView"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordReportTextView" />
+
+    <TextView
+        android:id="@+id/AddRecordRatingBarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="별점주기"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordReportEditText" />
+
+    <RatingBar
+        android:id="@+id/AddRecordRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/AddRecordRatingBarTextView"
+        app:layout_constraintStart_toStartOf="@id/AddRecordRatingBarTextView"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordRatingBarTextView" />
+
+    <Button
+        android:id="@+id/AddRecordAddImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="책 사진 촬영"
+        app:layout_constraintEnd_toEndOf="@id/AddRecordRatingBar"
+        app:layout_constraintStart_toStartOf="@id/AddRecordRatingBar"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordRatingBar" />
+
+    <ImageView
+        android:id="@+id/AddRecordImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AddRecordAddImageButton" />
+
+    <Button
+        android:id="@+id/AddRecordRegisterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="등록하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
