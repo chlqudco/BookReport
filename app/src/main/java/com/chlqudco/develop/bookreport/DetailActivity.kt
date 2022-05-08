@@ -65,6 +65,16 @@ class DetailActivity : AppCompatActivity() {
             }.start()
         }
 
+        binding.DetailDeleteButton.setOnClickListener {
+            //삭제 버튼
+            Thread{
+                db.bookDao().delete(bookModel.id!!)
+                runOnUiThread {
+                    finish()
+                }
+            }.start()
+        }
+
     }
 
     private fun allPermissionsGranted() = AddRecordActivity.REQUIRED_PERMISSIONS.all {

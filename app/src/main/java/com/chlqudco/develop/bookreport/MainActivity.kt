@@ -40,6 +40,22 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onRestart() {
+        super.onRestart()
+
+        Thread(Runnable {
+            db.bookDao().getAll().run {
+                runOnUiThread {
+                    if (this.isNotEmpty()) {
+                        binding.MainCenterTextView.isVisible = false
+                        adapter.listData = this as MutableList<BookEntity>
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+            }
+        }).start()
+    }
+
     override fun onResume() {
         super.onResume()
 
@@ -55,4 +71,5 @@ class MainActivity : AppCompatActivity() {
             }
         }).start()
     }
+
 }

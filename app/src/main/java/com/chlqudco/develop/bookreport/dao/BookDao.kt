@@ -17,4 +17,7 @@ interface BookDao {
     @Insert(onConflict =  OnConflictStrategy.REPLACE)
     fun insertBookReport(book: BookEntity)
 
+    //독후감 삭제
+    @Query("DELETE FROM book WHERE id = :id")
+    fun delete(id : Int)
 }
